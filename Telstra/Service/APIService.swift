@@ -30,7 +30,7 @@ class APIService {
     }
     
     // Set cache policy for the request to ignore cache data.
-    // discussion: This resolves the issue on UI when it goes offline app keeps getting no network problem if user tries to reload data in a short time period. It works fine on physical devices (tested on iOS 13.3.1), and simulators with iOS lower than iOS 13. But the issue still happens on simulator with iOS 13 sometimes after few times of reloading. I tried session configuration solution but didn't get improvement. So leave it as a discussion here.
+    // discussion: This resolves the issue on UI when it goes offline and app keeps getting no network problem if user tries to reload data in a short time period. It works fine on physical devices (tested on iOS 13.3.1), and simulators with iOS lower than iOS 13. But the issue still happens on simulator with iOS 13 sometimes after few times of reloading. I tried session configuration solution but didn't get improvement. So leave it as a discussion here.
     let request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 4)
     
     session.dataTask(with: request) { data, response, error in

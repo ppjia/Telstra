@@ -11,24 +11,43 @@ import XCTest
 
 class TelstraTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private var service: APIService?
+    
+    override func setUp() {
+      let mockSession = MockSession(dataTaskWithRequestCalled: { [weak self] in
+        (self?.loadSampleFileData(fileName: "stub"), nil, nil)
+      })
+      service = APIService(session: mockSession)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testContentFetch() {
+      service?.fetchContent { result in
+        switch result {
+          case let .success(content):
+            XCTAssert(content.rows?.count == 14)
+          default:
+            XCTAssert(false)
         }
+      }
     }
+    
+    func testContentViewModel() {
+      guard let service = service else {
+        fatalError("Couldn't start unit test!")
+      }
+      let viewModel = ContentViewModel(apiService: service)
+      viewModel.fetchContent { isSuccess in
+        XCTAssert(isSuccess)
+        XCTAssert(viewModel.numberOfFeed == 13)
+      }
+    }
+    
+    private func loadSampleFileData(fileName: String) -> Data? {
+      guard let sampleFilePath = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+        return nil
+      }
+      return try? Data(contentsOf: sampleFilePath)
+    }
+
 
 }
