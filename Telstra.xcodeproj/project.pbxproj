@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,9 @@
 		7149F0BE24502D64004059AB /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F0BD24502D64004059AB /* ContentViewModel.swift */; };
 		7149F0C024502D7D004059AB /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F0BF24502D7D004059AB /* FeedViewModel.swift */; };
 		7149F0C324502DAD004059AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F0C224502DAD004059AB /* Extensions.swift */; };
+		717F5E892450403200002B5E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F5E882450403200002B5E /* Helper.swift */; };
+		717F5E8B2450405000002B5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F5E8A2450405000002B5E /* Constants.swift */; };
+		717F5E8D245040AF00002B5E /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F5E8C245040AF00002B5E /* FeedContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		7149F0BD24502D64004059AB /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		7149F0BF24502D7D004059AB /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		7149F0C224502DAD004059AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		717F5E882450403200002B5E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		717F5E8A2450405000002B5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		717F5E8C245040AF00002B5E /* FeedContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = "<group>"; };
 		B2568C1C124C5E9EC29AB5A2 /* Pods_Telstra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telstra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA88A500905B6985DEC75583 /* Pods-TelstraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelstraTests.debug.xcconfig"; path = "Target Support Files/Pods-TelstraTests/Pods-TelstraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF3E27FF7B6197A30036C1C7 /* Pods-Telstra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra.debug.xcconfig"; path = "Target Support Files/Pods-Telstra/Pods-Telstra.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,7 +95,6 @@
 				BA88A500905B6985DEC75583 /* Pods-TelstraTests.debug.xcconfig */,
 				2DE420258843F6F619991455 /* Pods-TelstraTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				7117FE3424503ED20072B220 /* FeedTableCell.swift */,
+				717F5E8C245040AF00002B5E /* FeedContentViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				7149F0C224502DAD004059AB /* Extensions.swift */,
+				717F5E882450403200002B5E /* Helper.swift */,
+				717F5E8A2450405000002B5E /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -364,7 +372,10 @@
 				7149F0B424502A69004059AB /* APIService.swift in Sources */,
 				7117FE3524503ED20072B220 /* FeedTableCell.swift in Sources */,
 				7149F0C024502D7D004059AB /* FeedViewModel.swift in Sources */,
+				717F5E8D245040AF00002B5E /* FeedContentViewController.swift in Sources */,
 				7149F0B124502A30004059AB /* Feed.swift in Sources */,
+				717F5E8B2450405000002B5E /* Constants.swift in Sources */,
+				717F5E892450403200002B5E /* Helper.swift in Sources */,
 				7149F08B245027FD004059AB /* AppDelegate.swift in Sources */,
 				7149F0BE24502D64004059AB /* ContentViewModel.swift in Sources */,
 				7149F0C324502DAD004059AB /* Extensions.swift in Sources */,
